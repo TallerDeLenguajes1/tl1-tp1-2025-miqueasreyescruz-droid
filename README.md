@@ -50,36 +50,36 @@ Supongamos que quiero que Git ignore un archivo `ignorar.txt`, para ello debemos
 
 1. Crear o editar el archivo **.gitignore**
 
-Si aun no tengo el archivo, puedo crearlo y aniadir la regla en una sola linea desde Git Bash:
+    Si aun no tengo el archivo, puedo crearlo y aniadir la regla en una sola linea desde Git Bash:
 
-```bash
-echo "ignorar.txt" >> .gitignore
-```
+    ```bash
+    echo "ignorar.txt" >> .gitignore
+    ```
 
-- `echo "ignorar.txt"` escribe el nombre del archivo.
-- `>> .gitignore` crea el archivo (si no existe) o aniade la linea al final del archivo existente.
+    - `echo "ignorar.txt"` escribe el nombre del archivo.
+    - `>> .gitignore` crea el archivo (si no existe) o aniade la linea al final del archivo existente.
 
 2. Verificar el estado
 
-Para confirmar que Git ahora ignora el archivo, utilizamos el comando de estado:
+    Para confirmar que Git ahora ignora el archivo, utilizamos el comando de estado:
 
-```bash
-git status
-```
+    ```bash
+    git status
+    ```
 
-Si lo hicimos correctamente, `ignorar.txt` **no deberia aparecer** en la seccion de "Untracked files" (archivos sin seguimiento). En su lugar, veremos que el archivo `.gitignore` **aparece como un cambio nuevo** que debemos incluir en nuestro repositorio. 
+    Si lo hicimos correctamente, `ignorar.txt` **no deberia aparecer** en la seccion de "Untracked files" (archivos sin seguimiento). En su lugar, veremos que el archivo `.gitignore` **aparece como un cambio nuevo** que debemos incluir en nuestro repositorio. 
 
 3. Guardar la configuracion en nuestro repositorio
 
-Recordemos que el archivo `.gitignore` debe formar parte de nuestro proyecto para que funcione, y para que funcione, tambien en el repositorio remoto (Github). Ahora debemos prepararlo y confirmalo:
+    Recordemos que el archivo `.gitignore` debe formar parte de nuestro proyecto para que funcione, y para que funcione, tambien en el repositorio remoto (Github). Ahora debemos prepararlo y confirmalo:
 
-```bash
-git add .gitignore
-git commit -m "Agrego ignorar.txt a .gitignore"
-```
+    ```bash
+    git add .gitignore
+    git commit -m "Agrego ignorar.txt a .gitignore"
+    ```
 
-- `git add` prepara el archivo de configuracion para el siguiente commit.
-- `git commit` almacena de forma segura la regla de ignorar en nuestro repositorio local.
+    - `git add` prepara el archivo de configuracion para el siguiente commit.
+    - `git commit` almacena de forma segura la regla de ignorar en nuestro repositorio local.
 
 ---
 
