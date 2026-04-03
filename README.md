@@ -125,8 +125,16 @@ Paso de `valor_refencia` a `codigo`. Esto pues, la funcion recibe un "codigo" el
     - `temp` ==> `aux` // Pues solo se usa para no tener que modificar el contenido del puntero.
     - `suma` ==> `sumaDigitos` // Facilita para que se usa la variable.
 
+---
 
+### Correccion de errores en `codigo_sin_funcionar.c`
 
+A continuacion se muestra una tabla con los errores encontrados y corregidos:
 
-
-
+| Linea | Categoria | Descripcion | Solucion |
+| --- | --- | --- | --- |
+| 1 | Compilacion | No incluye Librerias necesarias | Se agrego la libreria correspondiente para que el codigo funcione |
+| 12 | Runtime | Dentro de scanf, falta `&` en la variable | Se agrego `&` |
+| 17 | Sintaxis | Falta `;` al final | Se agrego `;` |
+| 18 | Logica | La funcion pasa parametro por valor y es una funcion void, no devuelve ni modifica nada | Ahora la funcion pasa valor por referencia, y dentro de la funcion se modificaron las variables para que sean punteros |
+| 24 | Sintaxis | Falta `;` al final | Se agrego `;` |
