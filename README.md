@@ -101,13 +101,13 @@ Se realizaron las siguientes modificaciones:
 
 - Se cambio el nombre de las funciones auxiliares que utiliza `procesar_enigma`, de nombres genericos a nombres segun lo que realizan. 
 
-Por ejemplo:
+    Por ejemplo:
 
-_Si la funcion `f_alpha` invierte un numero, su nombre ahora es `invertir_num`._
+    _Si la funcion `f_alpha` invierte un numero, su nombre ahora es `invertir_num`._
 
 - Se modifico el nombre de la unica variable que utiliza la funcion `procesar_enigma`.
 
-Paso de `valor_refencia` a `codigo`. Esto pues, la funcion recibe un "codigo" el cual procesa para dar el resultado, de esta manera es un poco menos confuso (para mi).
+    Paso de `valor_refencia` a `codigo`. Esto pues, la funcion recibe un "codigo" el cual procesa para dar el resultado, de esta manera es un poco menos confuso (para mi).
 
 - Se modifico el nombre de las variables de la funcion `invertir_num` (antes `f_alpha`):
 
