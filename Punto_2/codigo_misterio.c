@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 void invertir_num(int *p_num) {
-    int num = *p_num;
+    int aux = *p_num;
     int num_invertido = 0;
-    while (num > 0) {
-        num_invertido = (num_invertido * 10) + (num % 10);
-        num = num / 10;
+    while (aux > 0) {
+        num_invertido = (num_invertido * 10) + (aux % 10);
+        aux = aux / 10;
     }
     *p_num = num_invertido;
 }
@@ -15,11 +15,11 @@ void div_en_2(int *p_num) {
 }
 
 void sumar_suma_de_digitos(int *p_num) {
-    int num = *p_num;
+    int aux = *p_num;
     int sumaDigitos = 0;
-    while (num > 0) {
-        sumaDigitos = sumaDigitos + (num % 10);
-        num = num / 10;
+    while (aux > 0) {
+        sumaDigitos = sumaDigitos + (aux % 10);
+        aux = aux / 10;
     }
     *p_num = *p_num + sumaDigitos;
 }
