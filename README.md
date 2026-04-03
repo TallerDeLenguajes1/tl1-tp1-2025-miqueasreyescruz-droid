@@ -1,6 +1,10 @@
-# Respuestas Pto2 - TPN01
+# Respuestas - TPN01
 
-## El archivo .gitignore
+---
+
+## Punto 1
+
+### El archivo .gitignore
 
 Este archivo tiene como funcion principal **indicarle a Git que archivos o carpetas debe ignorar** y no incluir en el historial de versiones.
 
@@ -8,7 +12,7 @@ Cuando un archivo esta listado en el `.gitignore`, Git deja de "rastrearlo" (**u
 
 ---
 
-## ¿Por que es conveniente incluirlo?
+### ¿Por que es conveniente incluirlo?
 
 Cuando estamos trabajano en nuestro proyecto, no todo lo que esta en nuestra carpeta de trabajo conviene subirlo a la nube. Incluir este archivo es fundamental por tres simples razones:
 
@@ -18,17 +22,17 @@ Cuando estamos trabajano en nuestro proyecto, no todo lo que esta en nuestra car
 
 ---
 
-## ¿Cuando se debe hacer?
+### ¿Cuando se debe hacer?
 
 Es altamente recomendable crearlo cuando se inicia el proyecto, idealmente justo despues del `git init`.
 
 ---
 
-## ¿Como configuraria el archivo .gitignore?
+### ¿Como configuraria el archivo .gitignore?
 
 Para configurarlo, solo se necesita listar los nombres o patrones de los archivos que se quiere excluir.
 
-### Sintaxis baisca:
+#### Sintaxis baisca:
 
 | Patron | Resultado |
 | --- | --- |
@@ -40,7 +44,7 @@ Para configurarlo, solo se necesita listar los nombres o patrones de los archivo
 
 ---
 
-## Ejemplo:
+### Ejemplo:
 
 Supongamos que quiero que Git ignore un archivo `ignorar.txt`, para ello debemos seguir los siguientes pasos:
 
@@ -76,3 +80,53 @@ git commit -m "Agrego ignorar.txt a .gitignore"
 
 - `git add` prepara el archivo de configuracion para el siguiente commit.
 - `git commit` almacena de forma segura la regla de ignorar en nuestro repositorio local.
+
+---
+
+## Punto 2
+
+### Cambios Codigo Secreto 2.0
+
+El codigo parte de un `codigo_secreto`, el cual es un numero entero. Se pasa la direccion de memoria del `codigo_secreto` a una funcion `procesar_enigma`. Esta funcion, a traves de otras funciones:
+
+1. Invierte el numero.
+2. Divide en dos el numero.
+3. Suma al numero, la suma de sus digitos.
+
+Y al final, el codigo muestra el resultado.
+
+### Cambio de nombre de funciones y variables:
+
+Se realizaron las siguientes modificaciones:
+
+- Se cambio el nombre de las funciones auxiliares que utiliza `procesar_enigma`, de nombres genericos a nombres segun lo que realizan. 
+
+Por ejemplo:
+
+_Si la funcion `f_alpha` invierte un numero, su nombre ahora es `invertir_num`._
+
+- Se modifico el nombre de la unica variable que utiliza la funcion `procesar_enigma`.
+
+Paso de `valor_refencia` a `codigo`. Esto pues, la funcion recibe un "codigo" el cual procesa para dar el resultado, de esta manera es un poco menos confuso (para mi).
+
+- Se modifico el nombre de las variables de la funcion `invertir_num` (antes `f_alpha`):
+
+    - `p` ==> `p_num` // Para destacar que es un puntero hacia un numero.
+    - `temp` ==> `aux` // Pues solo se usa para no tener que modificar el contenido del puntero.
+    - `rev` ==> `num_invertido` // Facilita para que se usa la variable.
+
+- Se modifico el nombre de las variables de la funcion `div_en_2` (antes `f_beta`):
+
+    - `p` ==> `p_num` // Para destacar que es un puntero hacia un numero.
+
+- Se modifico el nombre de las variables de la funcion `sumar_suma_de_digitos` (antes `f_gamma`):
+
+    - `p` ==> `p_num` // Para destacar que es un puntero hacia un numero.
+    - `temp` ==> `aux` // Pues solo se usa para no tener que modificar el contenido del puntero.
+    - `suma` ==> `sumaDigitos` // Facilita para que se usa la variable.
+
+
+
+
+
+
