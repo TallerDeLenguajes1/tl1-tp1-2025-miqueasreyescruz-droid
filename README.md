@@ -138,3 +138,11 @@ A continuacion se muestra una tabla con los errores encontrados y corregidos:
 | 17 | Sintaxis | Falta `;` al final | Se agrego `;` |
 | 18 | Logica | La funcion pasa parametro por valor y es una funcion void, no devuelve ni modifica nada | Ahora la funcion pasa valor por referencia, y dentro de la funcion se modificaron las variables para que sean punteros |
 | 24 | Sintaxis | Falta `;` al final | Se agrego `;` |
+
+---
+
+## Punto 4
+
+- 4) c) Se puede observar en el repositorio, ademas de los archivos originales, los nuevos archivos que cree, asi como todas modificaciones efectuadas. Los archivos que no se necesitan, son todos los archivos que crea el editor de codigo, asi como todos los archivos de compilacion.
+
+- 4) g) La direccion de memoria de la variable y el contenido del puntero son iguales, debido a que el puntero "guarda" la direccion de memoria de la variable. En el punto 4 se muestra la direccion de memoria propia del puntero, la cual es diferente a las otras, esto porque el propio puntero es otra variable.
